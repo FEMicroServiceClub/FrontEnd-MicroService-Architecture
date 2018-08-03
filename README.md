@@ -29,3 +29,7 @@
 - Using [Varnish Cache to integrate different modules](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html).
 - [Web Components as the integration layer](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/).
 - [“Blackbox” React components](https://news.ycombinator.com/item?id=13012916).
+
+
+### 其它资源
+- http://micro-frontends.org/
