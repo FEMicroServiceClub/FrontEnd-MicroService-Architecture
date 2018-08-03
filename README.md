@@ -19,3 +19,13 @@
 - 服务注册与服务订阅，目前没有现成方案
 - 资源冲突，由于是多个独立的js甚至是css，目前的方案是独立的名字空间以及服务注册id，通过服务注册id来构建自己的微服务唯一的名字空间
 - 
+
+### 现有前端微服务技术方案
+
+- The best solution I’ve seen is the [Single-SPA “meta framework”](https://github.com/CanopyTax/single-spa) to combine multiple frameworks on the same page without refreshing the page (see [this demo](https://single-spa.surge.sh/) that combines React, Vue, Angular 1, Angular 2, etc). See Bret Little’s explanation here.
+- [Multiple single-page apps that live at different URLs](https://news.ycombinator.com/item?id=13011795). The apps use NPM/Bower components for shared functionality.
+- Isolating micro-apps into [IFrames using libraries and Window.postMessage APIs to coordinate](https://news.ycombinator.com/item?id=13009285). IFrames share APIs exposed by their parent window.
+- Make the different [modules communicate over a shared events bus](https://www.quora.com/Is-there-a-micro-service-architecture-approach-for-front-end-development/answer/Mohamed-Abdel-Maksoud-2) (e.g. [chrisdavies/eev](https://github.com/chrisdavies/eev)). Each module can be built using its own framework, as long as it handles incoming and outgoing events.
+- Using [Varnish Cache to integrate different modules](http://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html).
+- [Web Components as the integration layer](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/).
+- [“Blackbox” React components](https://news.ycombinator.com/item?id=13012916).
